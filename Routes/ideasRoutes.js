@@ -11,7 +11,6 @@ ideasRouter
             })
         }else{
             Ideas.find({}, (err, ideas) => {
-                console.log("xd");
                 res.json(ideas);
                 if(err){res.status(500).send(err)}
             })
