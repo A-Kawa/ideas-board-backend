@@ -1,5 +1,5 @@
 import express from 'express';
-import movieRouter from './Routes/movieRoutes';
+import ideasRoutes from './Routes/ideasRoutes';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/api/Movies',movieRouter);
+app.use('/api/Movies',ideasRoutes);
 app.use((req,res,next) => {
    res.status(404).send('Wrong path, youre lost!')
 });
