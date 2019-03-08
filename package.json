@@ -20,7 +20,7 @@
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "latest",
-    "mongoose": "^5.4.9"
+    "mongoose": "^5.4.17"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
