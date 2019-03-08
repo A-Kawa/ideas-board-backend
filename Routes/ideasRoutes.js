@@ -11,7 +11,6 @@ ideasRouter
       });
     } else {
       Ideas.find({}, (err, ideas) => {
-        console.log(ideas);
         res.json(ideas);
         if (err) {
           res.status(500).send(err);
@@ -26,8 +25,8 @@ ideasRouter
   })
 
   .put("/edit", (req, res) => {
-    if (req.query._id) {
-      Ideas.findById(req.query._id, (err, ideas) => {
+    if (req.body._id) {
+      Ideas.findById(req.body._id, (err, ideas) => {
         ideas = editPropsFunction(ideas, req.body);
         ideas.save();
         res.json(ideas);
